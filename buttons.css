@@ -1,0 +1,10 @@
+.successButton{
+    margin: auto;
+    width: 348px;   
+        border-top: 7px solid green;
+}
+.alertButton{
+    margin: auto;
+    width: 348px;
+        border-top: 7px solid red;
+}

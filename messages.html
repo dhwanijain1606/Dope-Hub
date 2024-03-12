@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DopeHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="messages.css">
+    <link rel="shortcut icon" href="dopehubfavicon.png" type="image/x-icon">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="theme.js"></script>
+</head>
+
+<body >
+    <header>
+        <nav>
+            <div id="dopehub" class="nav-el">DopeHub</div>
+            <div id="icons" class="h-75 nav-el">
+                <ul>
+                    <li id="home"><a href="welcome.php"><i class="fa fa-home"></a></i></li>
+                    <li id="search"><a href="search.html"><i class="fa-solid fa-compass"></i></a></li>
+
+                    <li id="notification">
+                        <div class="ndropdown">
+                            
+                            <button class="ndropbtn"><i class="fa">&#xf0f3;</i></button>
+                            <div class="ndropdown-content">
+                                <a>
+                                    <p id="unread_notfications">~~~~~ NEW ~~~~~</p>
+                                </a>
+                                <a href="#">SushiSamurai9 liked your post</a>
+                                <a href="#">VintageCollector shared your post</a>
+                                <hr id="notiHR">
+                                <a href="#">Adventure20 started following you</a>
+                                <a href="#">StarGazer23 liked your post</a>
+                                <a href="#">NightOwl3 shared your post</a>
+                            </div>
+                    </li>
+
+                    <li>
+                        <div class="dropdown"><button class="dropbtn"><i class='fas fa-user '></i>
+                                </i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#"><ion-icon name="person-outline" class="dropdownIcons"></ion-icon>Profile</a>
+                                <a href="#"><ion-icon name="help-circle-outline" class="dropdownIcons"></ion-icon>Help & Support</a>
+                                <a href="#"><ion-icon name="settings-outline" class="dropdownIcons"></ion-icon>Setting</a>
+                                <a id="theme" onclick="darkmode()"><ion-icon name="contrast-outline" class="dropdownIcons"></ion-icon>Themes</a>
+                                <a href="login.php"><ion-icon name="log-out-outline" class="dropdownIcons"></ion-icon>Logout</a>
+                            </div>
+                    </li>
+                    <li id="plus"><a href="messages.html"><i class="far messagesIcon">&#xf4ad;</i></a></li>
+                </ul>
+
+            </div>
+            <div id="dayAndTime" class="nav-el">
+                <span id="timeAndDate"></span><br>
+                <span id="day"></span>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+        
+    <div class="container">
+    
+        <div class="leftSide">
+            <!-- header -->
+            <!-- <div class="header">
+                <div class="userimg">
+                    <img src="user.jpg" class="cover">
+                </div>
+    
+                <ul class="nav_icons">
+                    <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+                    <li><ion-icon name="chatbox"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                </ul>
+            </div> -->
+            <!-- search -->
+            <div class="search_chat">
+                <div>
+                    <input type="text" placeholder="search or enter a new chat">
+                    <ion-icon name="search-outline" id="search_icon"></ion-icon>
+                </div>
+            </div>
+            <!-- chat list -->
+            <div class="chatlist">
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="img1.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>RainbowChaser</h4>
+                            <p class="time">10:56</p>
+                        </div>
+                        <div class="message_p">
+                            <p>Thik hai yaar jesa tu kahe</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="img2.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>TechNinja7</h4>
+                            <p class="time">10:56</p>
+                        </div>
+                        <div class="message_p">
+    
+                            <p>Hello!!!</p>
+                            <b>1</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="img3.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>SunnySmiles88y</h4>
+                            <p class="time">10:56</p>
+                        </div>
+                        <div class="message_p">
+                            <p>Are you free???</p>
+                            <b>4</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="img4.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>CoffeeAddict27</h4>
+                            <p class="time">yesterday</p>
+                        </div>
+                        <div class="message_p">
+                            <p><ion-icon name="image"></ion-icon>  photo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="img5.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>TravelerSpirit</h4>
+                            <p class="time">yesterday</p>
+                        </div>
+                        <div class="message_p">
+                            <p>okay!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="img6.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>FitnessFreak77</h4>
+                            <p class="time">yesterday</p>
+                        </div>
+                        <div class="message_p">
+                            <p>Lets go for a run!!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block active">
+                    <div class="imgbx">
+                        <img src="img7.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>PizzaLover12</h4>
+                            <p class="time">25/11/2023</p>
+                        </div>
+                        <div class="message_p">
+                            <p>Good Night &#128564;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="img8.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>NightOwl3</h4>
+                            <p class="time">25/11/2023</p>
+                        </div>
+                        <div class="message_p">
+                            <p>I don't think so &#128524;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="img9.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>GamerGeek25</h4>
+                            <p class="time">24/11/2023</p>
+                        </div>
+                        <div class="message_p">
+                            <p> in &#127918; aja </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <div class="rightSide">
+            <div class="chatheader">
+                <div class="chatphoto"></div>
+                <div class="chatusernameinfo">
+                    <h4 id="username">RainbowChaser</h4>
+                    <p id="onlinestatus">Online</p>
+                </div>
+            </div>
+            <div class="inbox">
+                <div class="lefttext">
+                <div class="msgBoxes"><p>Hello</p></div>
+                <div class="msgBoxes"><p>what are you doing?</p></div>
+                <div class="msgBoxes"><p>Okay! great</p></div>
+                <div class="msgBoxes"><p>I was completing my school assignment</p></div>
+                <div class="msgBoxes"><p>sure!</p></div>
+                <div class="msgBoxes"><p>&#128519</p></div>
+                <div class="msgBoxes"><p>did You called me ?</p></div>
+                <div class="msgBoxes"><p>No problem &#128522</p></div>
+                <div class="msgBoxes"><p>&#128077</p></div>
+                </div>
+                
+                <div class="timestamp"> <p>yesterday</p></div>
+
+                <div class="righttext">
+                <div class="msgBoxesr"><p>Hi</p></div>
+                <div class="msgBoxesr"><p>nothing just chilling around</p></div>
+                <div class="msgBoxesr"><p>what about you</p></div>
+                <div class="msgBoxesr"><p>okay carry on with your work</p></div>
+                <div class="msgBoxesr"><p>bye see you later</p></div>
+                <div class="msgBoxesr"><p>yeah sure</p></div>
+                <div class="msgBoxesr"><p>&#128522</p></div>
+                <div class="msgBoxesr"><p>sorry it was by mistake</p></div>
+                <div class="msgBoxesr"><p>Yes &#9996</p></div>
+
+                </div>
+
+            </div>
+            <div class="chatFooter">
+                <div class="inputMessageDiv">
+                <input type="text" name="" id="chatInput" placeholder="Message....">
+                <button class="emoticons"><ion-icon name="happy-outline"></ion-icon></button>
+                <button class="gallery"><ion-icon name="images-outline"></ion-icon></button>
+                <button class="like"><ion-icon name="heart-outline"></ion-icon></button>
+            
+            
+            </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <script>
+        const currentDate = new Date();
+        const currentHour = currentDate.getHours();
+        const currentMinute = currentDate.getMinutes();
+        document.getElementById("timeAndDate").innerHTML = (`${currentHour}:${currentMinute}`);
+
+
+        const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const d = new Date();
+        let day = weekday[d.getDay()];
+        document.getElementById("day").innerHTML = day;
+
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const mytimeout = setTimeout(preloader, 2000);
+        function preloader() {
+            var el = document.querySelector('.loader');
+            var preloader = document.querySelector('.preloader');
+            preloader.style.display = 'none';
+            el.style.display = 'none';
+        };
+
+        window.onload = mytimeout;
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: gray;
+    /* font-family: 'tangerine', sans-serif; */
+}
+
+h1{
+    font-family: great vibes;
+}
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    font-family: 'tangerine',sans-serif;
+}
+
+.inputbox {
+    position: relative;
+    width: 250px;
+
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 5px;
+    outline: none;
+    font-size: 25px;
+    font-family: monospace;
+
+
+}
+
+
+.inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    pointer-events: none;
+    font-size: 20px;
+    color: black;
+    transition: all;
+    transition-duration: 0.5s;
+
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+input:valid+.inputbox span,
+input:focus+.inputbox span {
+    font-family: monospace;
+    color: #007acc;
+    transform: translateX(10px) translateY(-12px);
+    font-size: 0.80em;
+    padding: 0 10px;
+    letter-spacing: 0.5em;
+    background-color: #2e2e2e;
+    border-left: 1px solid;
+    border-right: 1px solid;
+
+}
+
+.buttons {
+    width:200px;
+    display: flex;
+    justify-content: space-between;
+        position: relative;
+            top: 20px;
+}
+
+.whitebox {
+    position: relative;
+    width: 600px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0);
+    overflow: hidden;
+    border-radius: 20px;
+    padding:40px 0;
+
+
+
+}
+
+.whitebox::before {
+    content: '';
+    offset: 10px;
+    position: absolute;
+    top: -120px;
+    width: 100px;
+    height: 800px;
+    background: linear-gradient(to bottom, #569cd6, #007acc);
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0);
+    animation: animate 5s linear infinite;
+    z-index: -2;
+
+}
+
+.whitebox::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+p {
+    font-size: 60px;
+    color: black;
+    transition: 0.5s;
+}
+p:hover {
+    text-shadow: 1px 1px #343a40;
+}
+
+a {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.inputbox :first-child a:hover {
+    text-shadow: 2px 2px #007acc;
+}
+
+.tichuk {
+    width: 5.5rem;
+    height: 3rem;
+}
+strong{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.successButton {
+    padding-top: 10px;
+    margin: auto;
+    width: 348px;
+    color: black;
+    border-top: 7px solid green;
+    font-family: comic;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    top: 80px;
+    z-index: 5;
+}
+
+.alertButton {
+padding-top: 10px;
+    margin: auto;
+    width: 348px;
+    color: black;
+    border-top: 7px solid red;
+    font-family: comic;
+    height: 100px;
+    background-color: rgb(255, 192, 202);
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    top: 80px;
+    z-index: 5;
+}
+#ErrorClose{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+#SuccessClose{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.fa-xmark{
+    color: black;
+}
+small{
+font-family: great vibes;
+font-size: 20px;
+}
+
+
+
+/*~~~~~~~~~~~~~new style hit and trial~~~~~~~~~~~~~~~*/
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+.form-control2 {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+.form-control2 input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-control2 input:focus,
+.form-control2 input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control2 label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control2 label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control2 input:focus+label span,
+.form-control2 input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+.form-control3 {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+.form-control3 input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-control3 input:focus,
+.form-control3 input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control3 label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control3 label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control3 input:focus+label span,
+.form-control3 input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~navbar Css~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`*/
+nav{
+    background-color: #2e2e2e;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    padding: 0 20px;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.navUL{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    
+}
+#navbarSupportedContent{
+    display: flex;
+}
+#logo{
+    font-size: 30px;
+    font-family: great vibes;
+    transition: 0.5s;
+}
+#logo:hover{
+    text-shadow: 2px 2px 1px #007acc;
+}
+ul li a{
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-weight: 600;
+   font-size: 20px;
+   color: #aaa;
+}
+ul li a:hover{
+    color: white;
+}
+ul li:nth-child(2) a{
+    color: white;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~BUTTONS CSS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.btn-53,
+.btn-53 *,
+.btn-53 :after,
+.btn-53 :before,
+.btn-53:after,
+.btn-53:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-53 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #000;
+    background-image: none;
+    color: #000;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+}
+
+.btn-53:disabled {
+    cursor: default;
+}
+
+.btn-53:-moz-focusring {
+    outline: auto;
+}
+
+.btn-53 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-53 [hidden] {
+    display: none;
+}
+
+.btn-53 {
+    border: 1px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 0.2rem 1.5rem;
+    position: relative;
+    /* font-size: 30px; */
+    text-transform: capitalize;
+}
+
+.btn-53 .original {
+    background: #fff;
+    color: #000;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+    transform: translateY(100%);
+}
+
+.btn-53 .letters {
+    display: inline-flex;
+}
+
+.btn-53 span {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.btn-53 span:nth-child(2n) {
+    transform: translateY(15px);
+}
+
+.btn-53:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-53:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.btn-53:hover span:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.btn-53:hover span:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.btn-53:hover span:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.btn-53:hover span:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-54,
+.btn-54 *,
+.btn-54 :after,
+.btn-54 :before,
+.btn-54:after,
+.btn-54:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-54 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+}
+
+.btn-54:disabled {
+    cursor: default;
+}
+
+.btn-54:-moz-focusring {
+    outline: auto;
+}
+
+.btn-54 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-54 [hidden] {
+    display: none;
+}
+
+.btn-54 {
+    border: 1px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    /* font-size: 30px; */
+    text-transform: capitalize;
+}
+
+.btn-54 .original {
+    background: #fff;
+    color: #000;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-54:hover .original {
+    transform: translateY(100%);
+}
+
+.btn-54 .letters {
+    display: inline-flex;
+}
+
+.btn-54 span {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.btn-54 span:nth-child(2n) {
+    transform: translateY(15px);
+}
+
+.btn-54:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-54:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.btn-54:hover span:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.btn-54:hover span:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.btn-54:hover span:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.btn-54:hover span:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+
+.preloader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+    z-index: 5;
+    position: fixed;
+}
+.loader {
+    position: relative;
+    width: 75px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#DDD 50px, transparent 0),
+        linear-gradient(#DDD 50px, transparent 0),
+        linear-gradient(#DDD 50px, transparent 0),
+        linear-gradient(#DDD 50px, transparent 0),
+        linear-gradient(#DDD 50px, transparent 0);
+    background-size: 8px 100%;
+    background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px;
+    animation: pillerPushUp 2s linear infinite;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #007acc;
+    border-radius: 50%;
+    animation: ballStepUp 2s linear infinite;
+}
+
+@keyframes pillerPushUp {
+
+    0%,
+    40%,
+    100% {
+        background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px
+    }
+
+    50%,
+    90% {
+        background-position: 0px 50px, 15px 58px, 30px 66px, 45px 78px, 60px 90px
+    }
+}
+
+@keyframes ballStepUp {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    5% {
+        transform: translate(8px, -14px)
+    }
+
+    10% {
+        transform: translate(15px, -10px)
+    }
+
+    17% {
+        transform: translate(23px, -24px)
+    }
+
+    20% {
+        transform: translate(30px, -20px)
+    }
+
+    27% {
+        transform: translate(38px, -34px)
+    }
+
+    30% {
+        transform: translate(45px, -30px)
+    }
+
+    37% {
+        transform: translate(53px, -44px)
+    }
+
+    40% {
+        transform: translate(60px, -40px)
+    }
+
+    50% {
+        transform: translate(60px, 0)
+    }
+
+    57% {
+        transform: translate(53px, -14px)
+    }
+
+    60% {
+        transform: translate(45px, -10px)
+    }
+
+    67% {
+        transform: translate(37px, -24px)
+    }
+
+    70% {
+        transform: translate(30px, -20px)
+    }
+
+    77% {
+        transform: translate(22px, -34px)
+    }
+
+    80% {
+        transform: translate(15px, -30px)
+    }
+
+    87% {
+        transform: translate(7px, -44px)
+    }
+
+    90% {
+        transform: translate(0, -40px)
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DopeHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">        
+    <link rel="shortcut icon" href="dopehubfavicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="search.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="theme.js"></script>
+</head>
+<body >
+<header>
+    <nav>
+    <div id="dopehub" class="nav-el">DopeHub</div>
+    <div id="icons" class="h-75 nav-el">
+            <ul>
+                <li id="home"><a href="welcome.php"><i class="fa fa-home"></a></i></li>
+                <li id="search"><a href="search.html"><i class="fa-solid fa-compass"></i></a></li>
+                <li id="notification">
+                        <div class="ndropdown">
+                            <button class="ndropbtn"><i class="fa">&#xf0f3;</i></button>
+                            <div class="ndropdown-content">
+                                 <a><p id="unread_notfications">~~~~~ NEW ~~~~~</p></a>
+                                <a href="#">SushiSamurai9 liked your post</a>
+                                <a href="#">VintageCollector shared your post</a>
+                                <hr id="notiHR">
+                                <a href="#">Adventure20 started following you</a>
+                                <a href="#">StarGazer23 liked your post</a>
+                                <a href="#">NightOwl3 shared your post</a>
+                            </div>
+                </li>
+                
+                
+                <li>
+                    <div class="dropdown"><button class="dropbtn"><i class='fas fa-user '></i></button>
+                    <div class="dropdown-content">
+                        <a href="#"><ion-icon name="person-outline" class="dropdownIcons"></ion-icon>Profile</a>
+                        <a href="#"><ion-icon name="help-circle-outline" class="dropdownIcons"></ion-icon>Help & Support</a>
+                        <a href="#"><ion-icon name="settings-outline" class="dropdownIcons"></ion-icon>Setting</a>
+                        <a id="theme" onclick="darkmode()"><ion-icon name="contrast-outline" class="dropdownIcons"></ion-icon>Themes</a>
+                        <a href="login.php"><ion-icon name="log-out-outline" class="dropdownIcons"></ion-icon>Logout</a>
+                    </div>
+                </li>
+                <li id="plus" ><a href="messages.html"><i class="far">&#xf4ad;</a></i></li>
+            </ul>
+       
+    </div>
+    <div id="dayAndTime" class="nav-el">
+        <span id="timeAndDate"></span><br>
+        <span id="day"></span>
+    </div>  
+    </nav>
+</header>
+
+<main>
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+        <div id="feed">
+            <div class="search">
+                <input type="text" name="searchbar" id="searchbar"  placeholder="Search">
+                <span><i class="fa fa-search fa-1x search-icon fa-bounce " style="color: rgb(82, 82, 82)"></i></span>
+            </div>
+
+            <div class="wrapper">
+                <div class="box a" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box b""></div>
+                <div class="box c""></div>
+                <div class="box d""></div>
+                <div class="box e""></div>
+                <div class="box f" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="500"></div>
+                <div class="box g"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box h" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box i"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box j"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" ></div>
+                <div class="box k"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box l"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box m"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box n"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box o"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box p"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box q"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box r"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box s"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box t"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box u"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box v"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box w"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box x"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                <div class="box y"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+            </div>
+        </div>
+</main>
+        <script>
+            const currentDate = new Date();
+            const currentHour = currentDate.getHours();
+            const currentMinute = currentDate.getMinutes();
+            document.getElementById("timeAndDate").innerHTML = (`${currentHour}:${currentMinute}`);
+
+
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const d = new Date();
+            let day = weekday[d.getDay()];
+            document.getElementById("day").innerHTML = day;
+
+
+            //  function updateClock() {
+
+            //         let now = new Date();
+            //         let hours = now.getHours();
+            //         let minutes = now.getMinutes();
+            //         let seconds = now.getSeconds();
+
+            //         hours = hours < 10 ? "0" + hours : hours;
+            //         minutes = minutes < 10 ? "0" + minutes : minutes;
+            //         seconds = seconds < 10 ? "0" + seconds : seconds;
+            //         const hoursElement = document.getElementById("ghante");
+            //         const minutesElement = document.getElementById("minutes");
+            //         const secondsElement = document.getElementById("seconds");
+
+            //         hoursElement.textContent = hours;
+            //         minutesElement.textContent = minutes;
+            //         secondsElement.textContent = seconds;
+            //     }
+            //     setInterval(updateClock, 1000);
+            //     const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            //     const d = new Date();
+            //     let day = weekday[d.getDay()];
+            //     document.getElementById("day").innerHTML = day;
+
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            const mytimeout=setTimeout(preloader,2000);
+            function preloader() {
+                    var el = document.querySelector('.loader');
+                    var preloader = document.querySelector('.preloader');
+                    preloader.style.display = 'none';
+                    el.style.display = 'none';
+                };
+            
+        window.onload = mytimeout;
+           
+        </script>
+</body>
+</html>
